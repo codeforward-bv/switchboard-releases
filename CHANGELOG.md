@@ -8,6 +8,30 @@ The version source of truth is `src-tauri/tauri.conf.json`.
 
 ## [Unreleased]
 
+## [1.0.0-beta.12] - 2026-06-21
+
+### Added
+
+- Two-session groups can be split horizontally (stacked top and bottom) as
+  well as side by side, via a new **Preferences → Layout** setting. Side by
+  side stays the default.
+- "Copy working directory" in a pane's right-click menu, for opening its cwd
+  elsewhere — a second window, Finder, or a non-Claude shell in the same
+  worktree.
+
+### Changed
+
+- Scrolling within a pane now focuses it, the same as clicking it.
+
+### Fixed
+
+- Folders no longer disappear when the sidebar is collapsed: the narrow rail
+  shows each folder as a tile that re-opens the sidebar to that folder,
+  instead of flattening folders away.
+- The focused-pane outline now clears when the app loses window focus, so a
+  backgrounded window no longer looks like a pane still has the keyboard.
+  Needs-input and done attention borders stay visible while away.
+
 ## [1.0.0-beta.11] - 2026-06-12
 
 ### Changed
@@ -277,6 +301,7 @@ Initial release.
   with a direct `proc_pidinfo(PROC_PIDVNODEPATHINFO)` FFI call, so session
   cwds refresh correctly and restore no longer reverts to the spawn default.
 
+[1.0.0-beta.12]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.12
 [1.0.0-beta.11]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.11
 [1.0.0-beta.10]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.10
 [1.0.0-beta.9]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.9

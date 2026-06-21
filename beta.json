@@ -1,11 +1,11 @@
 {
-  "version": "1.0.0-beta.11",
-  "notes": "### Changed\n\n- New session (`Cmd+N`) focuses the freshly created pane, so typing lands\n  in it immediately.\n- Closing the focused session (`Cmd+W` or the shell exiting) moves focus to\n  the next session in the group — or the previous one when the last session\n  was closed — instead of leaving the keyboard pointed at a dead pane.",
-  "pub_date": "2026-06-12T12:21:40.885Z",
+  "version": "1.0.0-beta.12",
+  "notes": "### Added\n\n- Two-session groups can be split horizontally (stacked top and bottom) as\n  well as side by side, via a new **Preferences → Layout** setting. Side by\n  side stays the default.\n- \"Copy working directory\" in a pane's right-click menu, for opening its cwd\n  elsewhere — a second window, Finder, or a non-Claude shell in the same\n  worktree.\n\n### Changed\n\n- Scrolling within a pane now focuses it, the same as clicking it.\n\n### Fixed\n\n- Folders no longer disappear when the sidebar is collapsed: the narrow rail\n  shows each folder as a tile that re-opens the sidebar to that folder,\n  instead of flattening folders away.\n- The focused-pane outline now clears when the app loses window focus, so a\n  backgrounded window no longer looks like a pane still has the keyboard.\n  Needs-input and done attention borders stay visible while away.",
+  "pub_date": "2026-06-21T21:36:32.607Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRTUU3Yld3ZUIzSno5eG5kMnpmaTJ0VkVXZXdHZXpINWk3SkNJRTlLS09Qb0xCenpQcVRRYlQrR3F2KzFJSTA3cEJhWU9Sa0VjS3B1dUZPcWllUU9TT2JnWDdPVW5xK2d3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgxMjY2OTAwCWZpbGU6U3dpdGNoYm9hcmQuYXBwLnRhci5negpxNkNmT291aVU4WVR4TDg5YXJvemdDbi92cTdzYU5HOUFwQ203ajUvblBENXZRZHhKRlVuTTFjNlMySlpUVTR6T2Z1ZlZDcldKZ1FId0g5UE9oaDBCdz09Cg==",
-      "url": "https://github.com/chrisb-c01/switchboard-releases/releases/download/v1.0.0-beta.11/Switchboard.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRTUU3Yld3ZUIzSitEYWI3Y2VSbU8zTTk0SGNEeFVtZ0lVY2NkVHhQZFFXQk9CMVdZZ2JUTlFMRXREMGdNMDM1Y2J2MXBlRFp0bm5DVFQxMHN0Yks1bTB3a0VPNVpmWUFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzgyMDc3NzkyCWZpbGU6U3dpdGNoYm9hcmQuYXBwLnRhci5nego1Snh0VFYyZkE5OGpoYTU0RWRsQURObkRabCtJUVZxNHBDbmJHV0tXRjVWNlhzMDE2dHB0bjNXRFZYVkRMZG1PMG1OYlgzR1dDWHFrUURUYlVmaGFEZz09Cg==",
+      "url": "https://github.com/chrisb-c01/switchboard-releases/releases/download/v1.0.0-beta.12/Switchboard.app.tar.gz"
     }
   }
 }
