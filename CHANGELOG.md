@@ -8,6 +8,83 @@ The version source of truth is `src-tauri/tauri.conf.json`.
 
 ## [Unreleased]
 
+## [1.0.0-beta.13] - 2026-09-02
+
+Switchboard now belongs to Codeforward: the repository moved to the
+`codeforward-bv` organisation, the bundle identifier is
+`nl.codeforward.switchboard`, and crash reports go to Codeforward's Sentry.
+Your tabs and sessions carry over automatically on first launch.
+
+Two one-time effects of the identifier change, both expected: macOS asks for
+notification permission again (it sees a new app), and the sidebar's width and
+collapsed state reset. Adding a hook event also re-shows the "enable hooks"
+banner once — clicking Enable is safe, the merge never removes existing
+entries and backs up `settings.json` first.
+
+### Added
+
+- **Repeat reminders** while a session waits for input, on an interval you
+  choose in **Preferences → Attention** (off, 2, 4, 5 or 10 minutes). Sessions
+  you are looking at are skipped. Four minutes lands inside the prompt cache
+  window.
+- **Per-tab settings** under the gear on a sidebar row: the folder new sessions
+  start in, the command that launches Claude, the command that resumes it, and
+  whether new sessions run it straight away. `{SESSION_ID}` and `{CWD}` expand,
+  so a wrapper like `hrclaude --parameter --resume {SESSION_ID}` works. Global
+  defaults live in **Preferences → Sessions**.
+- **Terminal font size** in **Preferences → Terminal**, per-tab overrides under
+  the gear, and `Cmd+=` / `Cmd+-` / `Cmd+0` to adjust the active tab as you
+  work.
+- **A GPU renderer switch** in **Preferences → Terminal**. It keeps up better
+  with very heavy output, but scrolls less smoothly in this webview, so panes
+  now use the DOM renderer unless you turn it on.
+- **Move sessions** between tabs: drag a pane by its header onto another pane
+  to reorder, or onto a tab's sidebar row to move it there. A pane keeps its
+  shell and its scrollback. "Move to …" in the pane's right-click menu does the
+  same without dragging.
+- **Reopen the last closed session** with `Cmd+Shift+T`. It comes back where it
+  was, and its Claude conversation resumes rather than starting fresh.
+- **Closing a tab's last session closes the tab**, which keeps its place in the
+  sidebar. Switch it off in **Preferences → Sessions**.
+- **Copy selection** and **Open selection in browser** in a pane's right-click
+  menu. The second repairs a URL that Claude's tables wrapped across lines,
+  which no link detector can rejoin.
+
+### Changed
+
+- **Groups are now called tabs.** A folder holds tabs, a tab holds sessions.
+  Labels only: nothing about your saved state changed.
+- **A "needs input" tag now survives focus.** Looking at a pane is not
+  answering it, so the tag — and the dock badge — stay until you type.
+- **Compaction counts as working** instead of looking idle, with a grace window
+  so the silence watchdog cannot demote a quiet compaction mid-run.
+- **Returning to Switchboard no longer jumps to another tab.** Any window
+  activation used to look like a notification click. Jumping is now opt-in in
+  **Preferences → Attention**.
+- Crash reports go to Codeforward's Sentry project. Issue history came along
+  with it.
+
+### Fixed
+
+- **Scrolling is steadier.** xterm rounds every scroll position to a whole
+  line, so content moves a row at a time; the previous 150ms animation smeared
+  those steps and no animation left them landing on uneven trackpad intervals.
+  A short 40ms animation spaces them evenly.
+- **Option+arrow moves by word** in Claude's prompt instead of emitting a
+  character. Option+Backspace and Option+Delete delete a word.
+- **A black band along the bottom of every pane.** xterm paints its viewport
+  black, and the fitted grid is up to one cell shorter than the pane, so the
+  remainder showed through. Present in every multi-pane grid until now.
+- **Resuming a session that Claude moved into a worktree.** Claude's own
+  directory is now recorded and entered before the resume, so a conversation
+  in `<repo>/.claude/worktrees/<name>` comes back instead of starting fresh.
+- **Losing the resume flag on an unclean quit.** A force quit let Claude's
+  `SessionEnd` clear it, so nothing resumed on the next launch — the case where
+  it matters most.
+- **Two copies of Switchboard fighting over one state file.** A second launch
+  now brings the running window forward instead of starting beside it, and
+  concurrent saves can no longer drop a write.
+
 ## [1.0.0-beta.12] - 2026-06-21
 
 ### Added
@@ -301,6 +378,7 @@ Initial release.
   with a direct `proc_pidinfo(PROC_PIDVNODEPATHINFO)` FFI call, so session
   cwds refresh correctly and restore no longer reverts to the spawn default.
 
+[1.0.0-beta.13]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.13
 [1.0.0-beta.12]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.12
 [1.0.0-beta.11]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.11
 [1.0.0-beta.10]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.10
