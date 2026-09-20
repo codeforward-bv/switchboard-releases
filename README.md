@@ -8,17 +8,17 @@ sessions. The application source lives in a separate private repository.
 
 - **Releases** — signed macOS bundles (`.app`, `.dmg`) and the auto-updater
   artifacts (`.app.tar.gz` + `.sig`) for each version, published under
-  [Releases](https://github.com/chrisb-c01/switchboard-releases/releases).
+  [Releases](https://github.com/codeforward-bv/switchboard-releases/releases).
 - **`latest.json`** — the [Tauri v2 updater](https://v2.tauri.app/plugin/updater/)
   manifest. The app checks
-  `https://github.com/chrisb-c01/switchboard-releases/releases/latest/download/latest.json`
+  `https://github.com/codeforward-bv/switchboard-releases/releases/latest/download/latest.json`
   to discover and download updates.
 - **`CHANGELOG.md`** — the [Keep a Changelog](https://keepachangelog.com/)
-  history, mirrored here from the app repo so it can be synced to GitBook.
+  history, mirrored here from the app repo.
 
 ## Installing
 
 Download the latest `.dmg` from the
-[Releases page](https://github.com/chrisb-c01/switchboard-releases/releases/latest)
+[Releases page](https://github.com/codeforward-bv/switchboard-releases/releases/latest)
 and drag Switchboard to your Applications folder. The app updates itself from
 then on.
