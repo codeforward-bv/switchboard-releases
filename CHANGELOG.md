@@ -378,19 +378,19 @@ Initial release.
   with a direct `proc_pidinfo(PROC_PIDVNODEPATHINFO)` FFI call, so session
   cwds refresh correctly and restore no longer reverts to the spawn default.
 
-[1.0.0-beta.13]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.13
-[1.0.0-beta.12]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.12
-[1.0.0-beta.11]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.11
-[1.0.0-beta.10]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.10
-[1.0.0-beta.9]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.9
-[1.0.0-beta.8]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.8
-[1.0.0-beta.7]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.7
-[1.0.0-beta.6]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.6
-[1.0.0-beta.5]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.5
-[1.0.0-beta.4]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.4
-[1.0.0-beta.3]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.3
-[1.0.0-beta.2]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.2
-[1.0.0-beta.1]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v1.0.0-beta.1
-[0.3.0]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v0.3.0
-[0.2.0]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v0.2.0
-[0.1.0]: https://github.com/chrisb-c01/switchboard-releases/releases/tag/v0.1.0
+[1.0.0-beta.13]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.13
+[1.0.0-beta.12]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.12
+[1.0.0-beta.11]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.11
+[1.0.0-beta.10]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.10
+[1.0.0-beta.9]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.9
+[1.0.0-beta.8]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.8
+[1.0.0-beta.7]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.7
+[1.0.0-beta.6]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.6
+[1.0.0-beta.5]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.5
+[1.0.0-beta.4]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.4
+[1.0.0-beta.3]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.3
+[1.0.0-beta.2]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.2
+[1.0.0-beta.1]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.1
+[0.3.0]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v0.3.0
+[0.2.0]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v0.2.0
+[0.1.0]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v0.1.0
