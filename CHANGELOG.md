@@ -8,6 +8,15 @@ The version source of truth is `src-tauri/tauri.conf.json`.
 
 ## [Unreleased]
 
+## [1.0.0-beta.14] - 2026-09-20
+
+### Fixed
+
+- **A pane's bottom line cut in half after moving the window to another
+  display.** xterm sizes its rows in device pixels, so a display with a
+  different scale makes every row a fraction taller while the row count stays —
+  and nothing re-measured the pane, because the pane itself never changed size.
+
 ## [1.0.0-beta.13] - 2026-09-02
 
 Switchboard now belongs to Codeforward: the repository moved to the
@@ -378,6 +387,7 @@ Initial release.
   with a direct `proc_pidinfo(PROC_PIDVNODEPATHINFO)` FFI call, so session
   cwds refresh correctly and restore no longer reverts to the spawn default.
 
+[1.0.0-beta.14]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.14
 [1.0.0-beta.13]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.13
 [1.0.0-beta.12]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.12
 [1.0.0-beta.11]: https://github.com/codeforward-bv/switchboard-releases/releases/tag/v1.0.0-beta.11
