@@ -1,11 +1,11 @@
 {
-  "version": "1.0.0-beta.14",
-  "notes": "### Fixed\n\n- **A pane's bottom line cut in half after moving the window to another\n  display.** xterm sizes its rows in device pixels, so a display with a\n  different scale makes every row a fraction taller while the row count stays —\n  and nothing re-measured the pane, because the pane itself never changed size.",
-  "pub_date": "2026-09-20T20:11:49.033Z",
+  "version": "1.0.0-beta.15",
+  "notes": "### Fixed\n\n- **\"Switchboard is damaged and can't be opened\" on a fresh install.** Only\n  the executable carried a signature, so a downloaded app failed macOS's\n  signature check outright. The whole app is now signed. It is still not\n  notarized, so the first launch needs **System Settings → Privacy & Security\n  → Open Anyway** once; updates install without asking.",
+  "pub_date": "2026-10-08T14:41:05.879Z",
   "platforms": {
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRTUU3Yld3ZUIzSjN3bGd2cDFaWEZ4enhXd2NjWjhrWUNjSElNRUo3bEZXd2g1UVFROVR0b2Q2YVVndUlEclc5S2FaeTB1VFQ5VnJxdE9MMjg2aVh1VGY3U0tJNys2akFzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg5OTM1MTA4CWZpbGU6U3dpdGNoYm9hcmQuYXBwLnRhci5negp2RGhSZVVEZVRiOWNoR3o3eFdsZkE5ZVFXbUxlMkhSeHdrUGxLeng5Rjk5RW5GM0E5dGtmWTF3RDRyNHF0WFQ4VXozN25nOGpFcTBObGhpOWFMTnJBQT09Cg==",
-      "url": "https://github.com/codeforward-bv/switchboard-releases/releases/download/v1.0.0-beta.14/Switchboard.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVRTUU3Yld3ZUIzSjJtNVl0aW9WdHRIeE0vd1ltdUpobmljWkVlekkrYjdwWlFpZzFOOGp6dFhNOW0rUkJ0RGpnQVdTWlZmaldDSHhXRCtTRUJIMmNSNmxQdWNLcmt0YUFNPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkxNDcwNDY1CWZpbGU6U3dpdGNoYm9hcmQuYXBwLnRhci5negp1QXYrUlhlTmxhdHVldnR6N3JNUDJQaWdzY2FLeWlORHJnQ1ZLSUVmU0ROcEFpdGhqbnE0b3V6b1hHa2M5WlB3SEFIamhkSUgyZ0YvS3ZyMmcrNHlEdz09Cg==",
+      "url": "https://github.com/codeforward-bv/switchboard-releases/releases/download/v1.0.0-beta.15/Switchboard.app.tar.gz"
     }
   }
 }
